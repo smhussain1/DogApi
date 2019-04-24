@@ -27,7 +27,7 @@ function displayImages(responseJson) {
         <img src='${responseJson.message[i]}'>
         </div>
         `;
-       //console.log(responseJson.message[i]); // Trying to get the image displayed in the Console as per assignment requirement #2.
+       console.log(responseJson.message[i]); // Trying to get the image displayed in the Console as per assignment requirement #2.
         $('.new-images').html(newHTML);
       }
     $('.images-returned').removeClass('hidden');
