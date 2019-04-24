@@ -1,5 +1,5 @@
 ///// Not part of the Assignments - This is for my Study purpose Only ///////
-
+//// 424 9AM - gO THRU AND COMMENT OUT QUESTIONS TO REVIEW WITH lAURA ////
 'use strict';
 
 const apiKey = 'f31bdbb3065c47159ac27c72a00a30f2'
@@ -18,7 +18,7 @@ function displayResults(responseJson, maxResults) {
   console.log(responseJson);
   $('#results-list').empty();
   // iterate through the articles array, stopping at the max number of results
-  for (let i = 0; i < responseJson.articles.length & i<maxResults ; i++){
+  for (let i = 0; i < responseJson.articles.length & i<maxResults ; i++){ //WHY DO THIS TWICE?
     // for each video object in the articles
     //array, add a list item to the results 
     //list with the article title, source, author,
