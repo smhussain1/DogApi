@@ -9,8 +9,9 @@ function formatQueryParams(params) {
   //create an array of the keys in the "params" object
   const queryItems = Object.keys(params)
     //for each of the keys in that array, create a string with the key and the key's value in the "params" object
-    .map(key => `${key}=${params[key]}`) // IS THIS CAHINED TO THE PREVIOUS LINE?  IS THIS == TO '.MAP(FUNCTION(KEY) {
-      // RETURN `${key}=${params[key]}`}  ?  THIS IS SAYING 'KEY=VALUE' OF THE OBJECT PARAMS, NO?  HOW DOES IT KNOW WHAT 'KEY'MEANS?
+    .map(key => `${key}=${params[key]}`) // .map is chained to the previous line, and this is the same as .MAP(FUNCTION(KEY) {
+      // RETURN `${key}=${params[key]}`}  ?  THIS IS SAYING 'KEY=VALUE' OF THE OBJECT PARAMS, where 'key' was arbitrarily 
+      // assigned as a name.
     })
   //return a string of the keys and values, separated by "&"
   return queryItems.join('&');

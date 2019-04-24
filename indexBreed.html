@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DogAPI Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<!--Create an app that lets users choose to display between 1 and 50 random dog images, 
+    then prints the results to the console. The app should feature a form with a required 
+    input where users indicate the number of images to retrieve, and the input should default to 3. 
+    Use the endpoint described in the "DISPLAY MULTIPLE RANDOM IMAGES FROM ALL DOGS COLLECTION" 
+    section of this page of the DogAPI docs.-->
+    <!--Create a form with user instruction and entry field and Submit button
+    Add JQuery listener, capture the number and feed it into an API Get Request,
+    Call the service and return the image and present it.  The user entered number will also have to
+    create as many divs to contain each image returned.  Finally, the entry field will have to return
+    to its initial state.-->
+<body>
+    <main role="main">
+        <legend role="user-number-selection">
+            <form role="input" class="user-form">
+                <label>Enter the Name of the Dog Breed You Would Like to See!</label>
+                <input type="text" id="dog-breed" value="">
+                <label>Submit Entry:</label>
+                <input type="submit" name="dog-breed-button" value="Submit!">
+            </form>
+        </legend>
+        <section class="images-returned hidden">
+            <h2>Check out these Dog Images!</h2>
+            <div class="new-images">
+                <img class="results-img" alt="placeholder" src="">
+            </div>
+            
+        </section>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="indexBreed.js"></script>
+  
+</body>

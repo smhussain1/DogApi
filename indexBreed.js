@@ -3,15 +3,14 @@
 function userEntry() {
         $('.user-form').submit(function(event) {  
             event.preventDefault();
-            let userNum = $("#dog-number").val();
-            userNum = parseInt(userNum, 10);
-            getDogImages(userNum);
+            let userBreed = $("#dog-breed").val();
+            getDogImages(userBreed);
         }
         )
 }
 
-function getDogImages(userNum) {
-    fetch('https://dog.ceo/api/breeds/image/random/' + userNum) 
+function getDogImages(userBreed) {
+    fetch('https://dog.ceo/api/breed/hound/images/random' + 'userBreed') 
     .then(response=>response.json()) 
     .then (responseJson =>
         displayImages(responseJson)) 
@@ -21,17 +20,16 @@ function getDogImages(userNum) {
 function displayImages(responseJson) {
     console.log(responseJson);
     let newHTML = " ";
-    for(let i=0; i<responseJson.message.length; i++) {  
+    //for(let i=0; i<responseJson.message.length; i++) {  
       newHTML +=
         `<div class="new-images">        
-        <img src='${responseJson.message[i]}'>
+        <img src='${responseJson.message}'>
         </div>
         `;
        //console.log(responseJson.message[i]); // Trying to get the image displayed in the Console as per assignment requirement #2.
         $('.new-images').html(newHTML);
-      }
+      
     $('.images-returned').removeClass('hidden');
-    
 }
 
   $(function() {
